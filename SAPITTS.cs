@@ -112,7 +112,12 @@ namespace ACT_Plugin
         {
             if (name != null)
                 synth.SelectVoice(name);
-            format = synth.Voice.SupportedAudioFormats[0];
+
+            if ( synth.Voice.SupportedAudioFormats.Count > 0 )
+    			format = synth.Voice.SupportedAudioFormats[0];
+            else
+                format = new SpeechAudioFormatInfo( 48000, AudioBitsPerSample.Sixteen, AudioChannel.Stereo );
+            
             waveFormat = new WaveFormat(format.SamplesPerSecond, format.BitsPerSample, format.ChannelCount);
         }
 
