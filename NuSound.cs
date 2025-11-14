@@ -7,11 +7,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 
-[assembly: AssemblyTitle("NuSound")]
-[assembly: AssemblyDescription("Uses NAudio's DirectSoundOut for playing sounds, and provides more TTS options.")]
-[assembly: AssemblyCompany("Lavish of Unrest")]
-[assembly: AssemblyVersion("1.0.0.1")]
-
 namespace ACT_Plugin
 {
 	public class NuSound : UserControl, IActPluginV1

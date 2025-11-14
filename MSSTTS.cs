@@ -1,5 +1,5 @@
-﻿using Microsoft.Speech.AudioFormat;
-using Microsoft.Speech.Synthesis;
+﻿using System.Speech.AudioFormat;
+using System.Speech.Synthesis;
 using NAudio.Wave;
 using System;
 using System.Collections;
@@ -25,7 +25,7 @@ namespace ACT_Plugin
 
         class VoiceInfo : ACT_Plugin.VoiceInfo
         {
-            public VoiceInfo(Microsoft.Speech.Synthesis.VoiceInfo info)
+            public VoiceInfo(System.Speech.Synthesis.VoiceInfo info)
             {
                 Description = info.Description;
                 Name = info.Name;
@@ -75,7 +75,7 @@ namespace ACT_Plugin
                 }
             }
 
-            IEnumerable<Microsoft.Speech.Synthesis.InstalledVoice> installedVoices;
+            IEnumerable<System.Speech.Synthesis.InstalledVoice> installedVoices;
             public VoiceInfoEnumerable(IEnumerable<InstalledVoice> ivs)
             {
                 installedVoices = ivs;
